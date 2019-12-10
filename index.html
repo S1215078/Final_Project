@@ -1,68 +1,247 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Cheyenne Mountain Resort</title>
-    <link rel="stylesheet" href="css/style.css">
-    <meta name="viewport" content="width=device-width">
-  </head>
-  <body> 
-    <header id="top" class="main-header">
-      <span class="title">Experience the Beauty of the Cheyenne Mountains</span>
-      <h1>Cheyenne World resort</h1>
-      <h3>El Paso County, Colorado</h2>
-      <img class="arrow" src="img/arrow.svg" alt="Down arrow">
-    </header>
+
+<head>
+  <title>Simple Weather</title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width">
+  <script src="https://maps.googleapis.com/maps/api/js?callback=loadMap" async defer></script>
+  <script src="js/weather.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Oswald|Rubik&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <header id="top" class="main-header">
+    <span class="title">For Your Up-To-Date Weather Information</span>
+    <h1>Simple Weather</h1>
+    <h3>Kansas City, MO </h3>
+    <img class="arrow" src="img/arrow.svg" alt="Down arrow">
+  </header>
+
+  <div class="primary-content t-border">
+    <p class="intro">
+      Weather is the state of the atmosphere, describing for example the degree to which it is hot or cold,
+      wet or dry, calm or stormy, clear or cloudy. Most weather phenomena occur in the lowest level of the
+      atmosphere, the troposphere just below the stratosphere. Weather refers to day-to-day temperature and
+      precipitation activity, whereas climate is the term for the averaging of atmospheric conditions over
+      longer periods of time. When used without qualification, "weather" is generally understood to mean
+      the weather of Earth.
+    </p>
+
+  </div>
+
+  <section id="sectionRadar">
+    <div id="radarTitle">
+      <h3>Weather Radar ( Past Hour )</h3>
+      <button class="radarOption" style="color: blue;">Temperatures</button>
+      <button class="radarOption" style="color: blue;">Active Weather</button>
+      <button class="radarOption" style="color: blue;">24 Hour Precipitation</button>
+    </div>
+    <div id="radarMap" class="map"></div>
+
+
+
+    <div class="secondary-content t-border group">
+
+      <h3 id="forecast"><strong>7 Day Forecast</strong></h3>
+      <div class="forecastGroup">
+
+
+      <div class="forecastPhotos">
+        <h3 class="forecastTitle">Today</h3>
+
+        <img src="img/weather/clear.png" class="forecastPhoto">
+     </div>
+
+      <div class="forecastInfo">
+        <div class="day">
+
+        <img src="img/icons/sunny.png" class="forecastIcon">
+
+        <div class="temperatureHolder">
+          <h4> Currently: <span><b class="forecastTemperature"> 30 °F</b></span> </h4>
+        </div>
+        <div class="temperatureHolder">
+          <h4> Tonight: <span><b class="forecastTemperature"> 25 °F</b></span> </h4>
+        </div>
+        <div class="temperatureHolder" id="fix">
+          <b class="forecastDescription">Slight chance of thunderstorms in the morning. With expected
+            snowfall tomorrow night.</b>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="forecastGroup">
+
+      <div class="forecastPhotos">
+        <h3 class="forecastTitle">Tomorrow</h3>
+
+        <img src="img/weather/clear.png" class="forecastPhoto">
+      </div>
+      <div class="forecastInfo">
+          <div class="day">
+  
+          <img src="img/icons/sunny.png" class="forecastIcon">
+  
+          <div class="temperatureHolder">
+            <h4> Currently: <span><b class="forecastTemperature"> 30 °F</b></span> </h4>
+          </div>
+          <div class="temperatureHolder">
+            <h4> Tonight: <span><b class="forecastTemperature"> 25 °F</b></span> </h4>
+          </div>
+          <div class="temperatureHolder" id="fix">
+            <b class="forecastDescription">Slight chance of thunderstorms in the morning. With expected
+              snowfall tomorrow night.</b>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="forecastGroup">
+
+      <div class="forecastPhotos">
+        <h3 class="forecastTitle">Thursday</h3>
+
+        <img src="img/weather/clear.png" class="forecastPhoto">
+      </div>
+      <div class="forecastInfo">
+          <div class="day">
+  
+          <img src="img/icons/sunny.png" class="forecastIcon">
+  
+          <div class="temperatureHolder">
+            <h4> Currently: <span><b class="forecastTemperature"> 30 °F</b></span> </h4>
+          </div>
+          <div class="temperatureHolder">
+            <h4> Tonight: <span><b class="forecastTemperature"> 25 °F</b></span> </h4>
+          </div>
+          <div class="temperatureHolder" id="fix">
+            <b class="forecastDescription">Slight chance of thunderstorms in the morning. With expected
+              snowfall tomorrow night.</b>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="forecastGroup">
+
+      <div class="forecastPhotos">
+        <h3 class="forecastTitle">Friday</h3>
+
+        <img src="img/weather/clear.png" class="forecastPhoto">
+      </div>
+      <div class="forecastInfo">
+          <div class="day">
+  
+          <img src="img/icons/sunny.png" class="forecastIcon">
+  
+          <div class="temperatureHolder">
+            <h4> Currently: <span><b class="forecastTemperature"> 30 °F</b></span> </h4>
+          </div>
+          <div class="temperatureHolder">
+            <h4> Tonight: <span><b class="forecastTemperature"> 25 °F</b></span> </h4>
+          </div>
+          <div class="temperatureHolder" id="fix">
+            <b class="forecastDescription">Slight chance of thunderstorms in the morning. With expected
+              snowfall tomorrow night.</b>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="forecastGroup">
+
+      <div class="forecastPhotos">
+        <h3 class="forecastTitle">Saturday</h3>
+
+        <img src="img/weather/clear.png" class="forecastPhoto">
+      </div>
+      <div class="forecastInfo">
+          <div class="day">
+  
+          <img src="img/icons/sunny.png" class="forecastIcon">
+  
+          <div class="temperatureHolder">
+            <h4> Currently: <span><b class="forecastTemperature"> 30 °F</b></span> </h4>
+          </div>
+          <div class="temperatureHolder">
+            <h4> Tonight: <span><b class="forecastTemperature"> 25 °F</b></span> </h4>
+          </div>
+          <div class="temperatureHolder" id="fix">
+            <b class="forecastDescription">Slight chance of thunderstorms in the morning. With expected
+              snowfall tomorrow night.</b>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+      <div class="forecastGroup">
+
+      <div class="forecastPhotos">
+        <h3 class="forecastTitle">Sunday</h3>
+
+        <img src="img/weather/clear.png" class="forecastPhoto">
+      </div>
+      <div class="forecastInfo">
+          <div class="day">
+  
+          <img src="img/icons/sunny.png" class="forecastIcon">
+  
+          <div class="temperatureHolder">
+            <h4> Currently: <span><b class="forecastTemperature"> 30 °F</b></span> </h4>
+          </div>
+          <div class="temperatureHolder">
+            <h4> Tonight: <span><b class="forecastTemperature"> 25 °F</b></span> </h4>
+          </div>
+          <div class="temperatureHolder" id="fix">
+            <b class="forecastDescription">Slight chance of thunderstorms in the morning. With expected
+              snowfall tomorrow night.</b>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="forecastGroup">
+
+        <div class="forecastPhotos">
+          <h3 class="forecastTitle">Sunday</h3>
+  
+          <img src="img/weather/clear.png" class="forecastPhoto">
+        </div>
+        <div class="forecastInfo">
+            <div class="day">
     
-		<div class="primary-content t-border">
-			<p class="intro">
-				Cheyenne Mountain is one of the most breathtaking attractions located in Colorado. It's home to a number of ski resorts and tourist attractions. Snow and skiing are a significant part of the area's reputation. Relax in rooms influenced from around the world.
-			</p>
-			<a class="callout" href="#booknow">Book Now!</a>
-      
-      <div class="wildlife">
-        <h2>Check out all the Wildlife</h2>
-        <p>
-          Beneath the eastern flank of Cheyenne Mountain, and borders the plains of Colorado in a stunning transition from plains to peaks. The land is in remarkable natural condition, and wildlife is abundant as well as diverse due to the property's relatively undisturbed and unfragmented nature. Wildlife in the park includes <a href="#foxes">foxes</a>, <a href="#bears">bears</a>, and <a href="#eagles">bald eagles</a>.
-        </p>
+            <img src="img/icons/sunny.png" class="forecastIcon">
+    
+            <div class="temperatureHolder">
+              <h4> Currently: <span><b class="forecastTemperature"> 30 °F</b></span> </h4>
+            </div>
+            <div class="temperatureHolder">
+              <h4> Tonight: <span><b class="forecastTemperature"> 25 °F</b></span> </h4>
+            </div>
+            <div class="temperatureHolder" id="fix">
+              <b class="forecastDescription">Slight chance of thunderstorms in the morning. With expected
+                snowfall tomorrow night.</b>
+              </div>
+            </div>
+          </div>
       </div>
-      
-			<a class="callout" href="#wildlife">See the Wildlife</a>
-		</div>
 
-		<div class="secondary-content t-border group"> 
-      <div class="resorts">
-        <img src="img/resort.jpg" alt="Resort">
         
-        <h3>Stay at Cheyenne Mountain Resort</h3>
-        <p>
-          Stay in wonderful rooms inspired by cultures worldwide. Experience a taste of Japan, Europe, the Caribbean and more. Relax like a king at a five star resort. <a href="#BookNow">Book Now!</a>
-        </p>
-        <ul>
-          <li><a href="#japan">Japanese Style</a></li>
-          <li><a href="#european">European Style</a></li>
-          <li><a href="#Caribbean">Caribbean Style</a></li>
-        </ul>		
-        <a class="callout" href="#booknow">Book Now!</a>
+  </div>
 
-      </div>
-      
-      <div class="tips">
-        <img src="img/mtn-landscape.jpg" alt="Mountain Landscape">
-        <h3>Things to do</h3>
-        <p>
-          There’s always something special happening at Cheyenne Mountain Resort. Take a look at some visitors favorites: </p>
-        <ol>
-          <li>Garden of the gods</li>
-          <li>Cave of the Winds </li>
-          <li>Cheyenne Mountain Zoo</li>
-          <li>Manitou Cliff Dwellings</li>
-        </ol>
-      </div>
-		</div>
 
-		<footer class="main-footer">
-			<p>All rights reserved to the state of <a href="#">Colorado</a>.</p>
-			<a href="#top">Back to top &raquo;</a>
-		</footer>
-  </body>
+
+
+    <footer class="main-footer">
+      <p>Forecast information obtained from <a href="https://www.weather.gov">www.weather.gov</a>.</p>
+      <p>Group 1: Frank Hoskins & Howard Rambo<p>
+          <a href="#top">Back to top &raquo;</a>
+    </footer>
+</body>
+
 </html>
