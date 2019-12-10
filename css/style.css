@@ -179,12 +179,18 @@ a:active {
 /* Layout Styles ------------------ */
 
 .primary-content,
-.secondary-content {
+.forecastGroup
+ {
   width: 75%;
   padding-left: 50px;
   padding-right: 50px;
   margin: auto;
   max-width: 960px;
+}
+.forecastGroup{
+  float: left;
+  margin: 0 475px auto;
+  padding: 1px;
 }
 
 
@@ -211,21 +217,24 @@ a:active {
 #lastDay {
   float: left;
 }
+.day{
+  padding-top: 30px;
+}
 
 /* Floated Columns ------------------ */
 
-.forecastDay,
-.forecastDay2 {
+.forecastPhotos,
+.forecastInfo {
   width: 46.5%;
   margin-bottom: 100px;
 
 }
 
-.forecastDay {
+.forecastPhotos {
   float: left;
 }
 
-.forecastDay2 {
+.forecastInfo {
   float: right;
 }
 
@@ -287,8 +296,8 @@ a:active {
     font-size: 1rem;
   }
 
-  .forecastDay,
-  .forecastDay2 {
+  .forecastPhotos,
+  .forecastInfo {
     float: none;
     width: 100%;
   }
